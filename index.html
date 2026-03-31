@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MareReady</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<h1>MareReady</h1>
+<p>Breeding timing reminders made simple.</p>
+
+<div class="container">
+  <form class="form-box" id="mareForm">
+    <h2>Mare Info</h2>
+
+    <label>Mare Name:</label>
+    <input type="text" id="mareName" required>
+
+    <label>Last Heat Date:</label>
+    <input type="date" id="lastHeat" required>
+
+    <label>Breeding Method:</label>
+    <select id="method">
+      <option>Live Cover</option>
+      <option>Cooled Semen</option>
+      <option>Frozen Semen</option>
+      <option>AI</option>
+    </select>
+
+    <label>Vet Name:</label>
+    <input type="text" id="vetName" required>
+
+    <label>Vet Email or Phone:</label>
+    <input type="text" id="vetContact" required>
+
+    <label>Number of Check Days:</label>
+    <input type="number" id="checkDays" value="3" min="1" required>
+
+    <button type="submit">Generate Plan</button>
+  </form>
+
+  <div class="output-box">
+    <h2>Breeding Plan</h2>
+    <div id="planOutput"></div>
+
+    <h2>Calendar Preview</h2>
+    <div id="calendarPreview"></div>
+
+    <h2>Message to Vet</h2>
+    <div id="vetMessage"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
