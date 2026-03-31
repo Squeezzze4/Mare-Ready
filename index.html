@@ -7,51 +7,56 @@
 </head>
 <body>
 
-<h1>MareReady</h1>
-<p>Breeding timing reminders made simple.</p>
+  <h1>MareReady</h1>
+  <p>Breeding timing reminders made simple.</p>
 
-<div class="container">
-  <form class="form-box" id="mareForm">
-    <h2>Mare Info</h2>
+  <div class="container">
+    <form class="form-box" id="mareForm" action="https://hooks.zapier.com/hooks/catch/17315887/ung3hst/" method="POST" target="hidden_iframe">
+      <h2>Mare Info</h2>
 
-    <label>Mare Name:</label>
-    <input type="text" id="mareName" required>
+      <label>Mare Name:</label>
+      <input type="text" id="mareName" name="mareName" required>
 
-    <label>Last Heat Date:</label>
-    <input type="date" id="lastHeat" required>
+      <label>Last Heat Date:</label>
+      <input type="date" id="lastHeat" name="lastHeat" required>
 
-    <label>Breeding Method:</label>
-    <select id="method">
-      <option>Live Cover</option>
-      <option>Cooled Semen</option>
-      <option>Frozen Semen</option>
-      <option>AI</option>
-    </select>
+      <label>Breeding Method:</label>
+      <select id="method" name="method">
+        <option>Live Cover</option>
+        <option>Cooled Semen</option>
+        <option>Frozen Semen</option>
+        <option>AI</option>
+      </select>
 
-    <label>Vet Name:</label>
-    <input type="text" id="vetName" required>
+      <label>Vet Name:</label>
+      <input type="text" id="vetName" name="vetName" required>
 
-    <label>Vet Email or Phone:</label>
-    <input type="text" id="vetContact" required>
+      <label>Vet Email or Phone:</label>
+      <input type="text" id="vetContact" name="vetContact" required>
 
-    <label>Number of Check Days:</label>
-    <input type="number" id="checkDays" value="3" min="1" required>
+      <label>Number of Check Days:</label>
+      <input type="number" id="checkDays" name="checkDays" value="3" min="1" required>
 
-    <button type="submit">Generate Plan</button>
-  </form>
+      <input type="hidden" id="checkDatesField" name="checkDates">
+      <input type="hidden" id="messageField" name="message">
 
-  <div class="output-box">
-    <h2>Breeding Plan</h2>
-    <div id="planOutput"></div>
+      <button type="submit">Generate Plan</button>
+    </form>
 
-    <h2>Calendar Preview</h2>
-    <div id="calendarPreview"></div>
+    <div class="output-box">
+      <h2>Breeding Plan</h2>
+      <div id="planOutput"></div>
 
-    <h2>Message to Vet</h2>
-    <div id="vetMessage"></div>
+      <h2>Calendar Preview</h2>
+      <div id="calendarPreview"></div>
+
+      <h2>Message to Vet</h2>
+      <div id="vetMessage"></div>
+    </div>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <script src="script.js"></script>
 </body>
 </html>
