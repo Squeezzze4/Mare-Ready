@@ -1,1 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 40px;
+  color: #1f2d3d;
+}
 
+h1 {
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-box,
+.output-box {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  width: 540px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 34px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-top: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cfcfcf;
+  border-radius: 12px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  background: #7fb45a;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6da14a;
+}
+
+#planOutput,
+#calendarPreview,
+#vetMessage {
+  background: #eef0f4;
+  border-radius: 16px;
+  padding: 18px;
+  font-size: 18px;
+  margin-bottom: 24px;
+  min-height: 60px;
+}
